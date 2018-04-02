@@ -1,0 +1,9 @@
+version: '3'
+services:
+  tomcat:
+    build: .
+    ports:
+     - "7443:8080"
+    volumes:
+     - ./tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
+     - ./manager_context.xml:/usr/local/tomcat/webapps/manager/META-INF/context.xml
